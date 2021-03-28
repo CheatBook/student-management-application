@@ -11,4 +11,6 @@ public interface StudentMapper {
     List<Student> getAllStudent();
 
     Student getStudent(int id);
+
+    int updateByPkey(int id);
 }

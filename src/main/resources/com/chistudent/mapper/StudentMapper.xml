@@ -9,4 +9,9 @@
     SELECT * FROM STUDENT WHERE
     id = #{id}
   </select>
+
+  <update id="updateByPkey">
+    UPDATE STUDENT SET name = 'kanako'
+    WHERE id = #{id}
+  </update>
 </mapper>
