@@ -33,7 +33,7 @@ public class StudentController {
 
     @PostMapping
     String addStudent() {
-        mapper.insert("kakaka");
+        mapper.insert("kanako", 20, 3, 4, "kanako@example.com");
         return "追加しました";
     }
 

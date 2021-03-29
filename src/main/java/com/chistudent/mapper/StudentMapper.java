@@ -14,5 +14,7 @@ public interface StudentMapper {
 
     int updateByPkey(int id);
 
-    int insert(String name);
+    int insert(String name, int age, int status, int departementId,
+            String email);
+
 }

@@ -20,7 +20,7 @@
   <insert id="insert">
     INSERT
     INTO STUDENT (NAME, AGE, STATUS, DEPARTMENT_ID, EMAIL)
-    VALUES (#{name}, 1, 1, 1, 'kanta@example.com');
+    VALUES (#{name}, #{age}, #{status}, #{departementId}, #{email})
   </insert>
 
   <update id="updateByPkey">
