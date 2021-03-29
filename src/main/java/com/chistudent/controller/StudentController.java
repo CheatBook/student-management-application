@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,12 @@ public class StudentController {
     @GetMapping(path = "{id}")
     Student showStudent(@PathVariable int id) {
         return mapper.getStudent(id);
+    }
+
+    @PostMapping
+    String addStudent() {
+        mapper.insert("kakaka");
+        return "追加しました";
     }
 
     @PutMapping(path = "{id}")

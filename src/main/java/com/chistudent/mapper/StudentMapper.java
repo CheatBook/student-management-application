@@ -13,4 +13,6 @@ public interface StudentMapper {
     Student getStudent(int id);
 
     int updateByPkey(int id);
+
+    int insert(String name);
 }

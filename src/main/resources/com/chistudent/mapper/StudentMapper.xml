@@ -2,16 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.chistudent.mapper.StudentMapper">
   <select id="getAllStudent" resultType="Student">
-    SELECT * FROM STUDENT
+    SELECT
+    *
+    FROM
+    STUDENT
   </select>
 
   <select id="getStudent" resultType="Student">
-    SELECT * FROM STUDENT WHERE
-    id = #{id}
+    SELECT
+    *
+    FROM
+    STUDENT
+    WHERE
+    ID = #{ ID }
   </select>
 
+  <insert id="insert">
+    INSERT
+    INTO STUDENT (NAME, AGE, STATUS, DEPARTMENT_ID, EMAIL)
+    VALUES (#{name}, 1, 1, 1, 'kanta@example.com');
+  </insert>
+
   <update id="updateByPkey">
-    UPDATE STUDENT SET name = 'kanako'
-    WHERE id = #{id}
+    UPDATE STUDENT
+    SET
+    NAME = 'kanako'
+    WHERE
+    ID = #{ ID }
   </update>
 </mapper>
